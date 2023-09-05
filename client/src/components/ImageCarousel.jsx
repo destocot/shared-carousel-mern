@@ -15,7 +15,10 @@ export default function ImageCarousel() {
       method: "GET",
     })
       .then((res) => res.json())
-      .then((data) => setImages(data))
+      .then((data) => {
+        console.log("test", data);
+        setImages(data);
+      })
       .catch((err) => console.log(err));
   };
 
