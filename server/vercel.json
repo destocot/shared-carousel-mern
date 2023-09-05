@@ -15,5 +15,15 @@
         "Access-Control-Allow-Origin": "*"
       }
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://shared-carousel-api.vercel.app/api/(.*)"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
   ]
 }
