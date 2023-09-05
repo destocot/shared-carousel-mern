@@ -2,9 +2,15 @@ require('dotenv').config();
 const express = require('express');
 const router = require('./routes/route.js');
 const database = require('./database/index.js');
+const cors = require('cors');
 
 const app = express();
 app.use(express.json());
+app.use(cors({
+  origin: ["https://shared-carousel-mern-1whq.vercel.app"],
+  methods: ["POST", "GET"],
+  credentials: true
+}))
 
 app.use('/api/images', router);
 
