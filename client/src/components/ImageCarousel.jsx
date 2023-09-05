@@ -26,7 +26,7 @@ export default function ImageCarousel() {
   return (
     <div>
       <h1>Last 10 Images Shared</h1>
-      <button onClick={() => fetchImages()}>Fetch Images</button>
+      {/* <button onClick={() => fetchImages()}>Fetch Images</button> */}
       <CarouselStyles>
         {images.map((image) => (
           <Image key={image._id} info={image} />
