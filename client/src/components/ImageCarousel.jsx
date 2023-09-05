@@ -11,10 +11,14 @@ export default function ImageCarousel() {
   useEffect(() => fetchImages, []);
 
   const fetchImages = () => {
+    console.log("huh");
     fetch("https://shared-carousel-api.vercel.app/api/images", {
       method: "GET",
     })
-      .then((res) => res.json())
+      .then((res) => {
+        console.log("wuh", res);
+        return res.json();
+      })
       .then((data) => {
         console.log("test", data);
         setImages(data);
