@@ -10,7 +10,7 @@ export default function PictureForm() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    fetch("/api/images", {
+    fetch("https://shared-carousel-api.vercel.app/api/images", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
