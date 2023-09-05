@@ -7,7 +7,7 @@ const cors = require('cors');
 const app = express();
 app.use(express.json());
 app.use(cors({
-  origin: ["https://shared-carousel-mern-1whq.vercel.app"],
+  origin: ["https://shared-carousel-demo.vercel.app/"],
   methods: ["POST", "GET"],
   credentials: true
 }))
