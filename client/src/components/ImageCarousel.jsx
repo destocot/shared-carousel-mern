@@ -13,6 +13,10 @@ export default function ImageCarousel() {
   const fetchImages = () => {
     fetch("https://shared-carousel-demo.vercel.app/api/images", {
       method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-type": "application/json",
+      },
     })
       .then((res) => {
         console.log(res);
