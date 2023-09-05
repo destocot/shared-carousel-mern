@@ -11,7 +11,7 @@ export default function ImageCarousel() {
   useEffect(() => fetchImages, []);
 
   const fetchImages = () => {
-    fetch("https://shared-carousel-api.vercel.app/api/images", {
+    fetch("api/images", {
       method: "GET",
     })
       .then((res) => {
